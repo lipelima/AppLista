@@ -4,15 +4,135 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="16dp"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/titleName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/txt_title_name"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <EditText
+        android:id="@+id/editFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elegantTextHeight="true"
+        android:ems="10"
+        android:hint="@string/txt_hint_primeiro_nome"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleName"
+        app:layout_constraintVertical_bias="0.047"
+        android:autofillHints=""
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <EditText
+        android:id="@+id/editSecondName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elegantTextHeight="true"
+        android:ems="10"
+        android:hint="@string/txt_hint_sobrenome"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFirstName"
+        app:layout_constraintVertical_bias="0.044"
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
+
+    <EditText
+        android:id="@+id/editNameEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elegantTextHeight="true"
+        android:ems="10"
+        android:hint="@string/txt_hint_nome_evento"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSecondName"
+        app:layout_constraintVertical_bias="0.053"
+        tools:ignore="HardcodedText,VisualLintTextFieldSize"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/editPhoneContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elegantTextHeight="true"
+        android:ems="10"
+        android:hint="@string/txt_hint_telefone_contato"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNameEvent"
+        app:layout_constraintVertical_bias="0.059"
+        android:importantForAutofill="no"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="36dp"
+        android:paddingTop="8dp"
+        android:paddingRight="36dp"
+        android:paddingBottom="8dp"
+        android:text="@string/txt_button_clear"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFinish"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSave"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPhoneContact"
+        app:layout_constraintVertical_bias="0.528" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:paddingLeft="36dp"
+        android:paddingTop="8dp"
+        android:paddingRight="36dp"
+        android:paddingBottom="8dp"
+        android:text="@string/txt_button_save"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFinish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPhoneContact"
+        app:layout_constraintVertical_bias="0.528" />
+
+    <Button
+        android:id="@+id/buttonFinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/txt_button_finish"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPhoneContact"
+        app:layout_constraintVertical_bias="0.829"
+        tools:ignore="VisualLintButtonSize" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
